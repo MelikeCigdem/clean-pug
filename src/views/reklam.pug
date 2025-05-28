@@ -1,0 +1,23 @@
+extends ./layout/layout.pug
+
+block content
+    .container.news-content 
+        .row
+            .col-12.mt-3
+                .news-detail.p-3
+                    nav.breadcrumb-nav(aria-label="breadcrumb").mb-2
+                        ol.breadcrumb
+                            li.breadcrumb-item: a(href="./") Anasayfa
+                            li.breadcrumb-item.active: a(href="./reklam.html") Reklam
+
+                    hr.mt-1.mb-3
+                    h1.news-title.ps-1.ps-sm-2 Reklam
+                    .ads-content.text-center.mt-5
+                        .ads-content-logo.mb-3
+                            img(src="./assets/img/logo.png" alt="Son Dakika Haberler - En Son Gazete Haberleri | GÜNEŞ" width="100px")
+                        p.lead www.gunes.com'da yer almak için bizimle iletişime geçebilirsiniz
+                        h6 Telefon
+                        a(href="tel:02124491221").fs-6 0212 449 12 21
+                        .mt-3
+                        h6 E-posta
+                        a(href="mailto:turkmedyadigital@turkmedya.com.tr").fs-6 turkmedyadigital@turkmedya.com.tr

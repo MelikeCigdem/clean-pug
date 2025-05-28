@@ -1,0 +1,130 @@
+block variables
+doctype html
+html(lang="tr")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Son Dakika Haberler - En Son Gazete Haberleri | GÜNEŞ
+        link(rel="stylesheet" href="./assets/css/main.css?v=1.2.0")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link type="image/x-icon" href="/assets/img/favicon.ico" rel="shortcut icon">
+        <link type="image/x-icon" href="/assets/img/favicon.ico" rel="icon">
+    block css
+    body(class=body_class)
+        .mobile-menu-wrapper.d-none
+            .mobile-menu-header.d-flex.flex-row.align-items-center.p-2
+                .mobile-close.m-2.border.br-3.d-inline-block.px-2
+                    .icon.icon-arrow-left
+                a.logo(href="./").mx-auto.pe-0.pe-lg-5.justify-content-center.d-flex.col
+                    img(src="./assets/img/aksam-logo@2x.png" alt="Son Dakika Haberler - En Son Gazete Haberleri | GÜNEŞ" width="90px")
+                .social-area.d-flex.justify-content-end
+                    a(href="#", target="_blank").px-1: i.me-2.icon.icon-facebook
+                    a(href="#", target="_blank").px-1: i.me-2.icon.icon-twitter
+                    a(href="#", target="_blank").px-1: i.me-2.icon.icon-instagram
+            .mobile-menu-buttons.pt-3
+                a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="./")
+                    .d-flex.align-items-center
+                        i.me-2.icon.icon-house-door-fill
+                        | ANASAYFA
+                a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="./hotnews.html")
+                    .d-flex.align-items-center
+                        i.me-2.icon.icon-clock-fill
+                        | SON DAKİKA
+                a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="writers.html")
+                    .d-flex.align-items-center
+                        i.me-2.icon.icon-pen-fill
+                        | YAZARLAR
+                a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="gallery.html")
+                    .d-flex.align-items-center
+                        i.me-2.icon.icon-image-fill
+                        | FOTO GALERİ
+                a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="gallery.html")
+                    .d-flex.align-items-center
+                        i.me-2.icon.icon-play-btn-fill
+                        | VİDEO GALERİ
+            .mobile-menu-categories.m-3.br-3
+                .mobile-menu-scroll.m-3
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | SPOR
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | MAGAZİN
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | SİYASET
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | EKONOMİ
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | YAŞAM
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | DÜNYA
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | KÜLTÜR SANA
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | EĞİTİM
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | TELEVİZYON
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | CUMARTESİ
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | SİNEMA
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | KİTAP
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | TREND
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | TARİH
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | BİLİM VE TEKNOLOJİ
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | SAĞLIK
+                    a.mobile-menu-btn.py-2.px-2.mx-4.d-block(href="category.html")
+                        .d-flex.align-items-center
+                            i.icon.icon-tag-fill
+                            | MODA
+
+        .main-wrapper
+            include ../partial/header.pug
+            block content
+            include ../partial/footer.pug
+        .side-adverse-wrapper
+            .side-adverse.adverse-left
+                img(src="./assets/img/_delete/ads2.jpg" alt="adverse")
+            .container: .row: .col
+            .side-adverse.adverse-right
+                img(src="./assets/img/_delete/ads3.jpg" alt="adverse")
+        script(src="./assets/js/min/scripts.min.js?v=1.0.6") 
+        block js

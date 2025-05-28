@@ -1,0 +1,207 @@
+extends ./layout/layout.pug
+
+
+
+block content
+
+    header.header
+        .container
+            .row
+            .col-12.text-center
+                img.header__img(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png" width="55" height="55" alt="img")
+                | Emojigraph
+
+                form.header__form.text-center(method="get" action="/tr/search/" name="search" data-simplesearch-form="")
+                    .row
+                        .col-11.header__div__form
+                            .div__input.input-group.mb-3
+                                input.search-input.header__input.main__header__input(type="text" name="q" required=""  value="" data-search-input="search/")
+                                input(type="hidden" name="searchLang" value="tr")
+                                .input-group-append
+                                    button.search-submit.header__button.light__search__button.btn.btn-outline-secondarys(type="submit")
+                                        img(src="https://emojigraph.org/static/img/search-icon17DARK.a63ca5f1c508.svg" width="20" height="20" alt="⚲")
+                                    //- button.search-submit.header__button.dark__search__button.btn.btn-outline-secondarys(type="submit")
+                                    //-     img(src="https://emojigraph.org/static/img/search-icon17DARK.a63ca5f1c508.svg" width="20" height="20" alt="⚲")
+                                .change__language.language__main
+                                    .hide__arrow
+                                        label(for="sitelang") 
+                                            | TR 
+                                            i.down
+                                        select.select__searchLanguage#sitelang(onchange="javascript:location.href = this.value;")
+                                            option(value="/") English
+                                            option(value="/ar/") العربيّة
+                                            option(value="/da/") dansk
+                                            option(value="/de/") Deutsch
+                                            option(value="/el/") Ελληνικά
+                                            option(value="/es/") español
+                                            option(value="/fr/") français
+                                            option(value="/he/") עברית
+                                            option(value="/hi/") हिंदी
+                                            option(value="/id/") Bahasa Indonesia
+                                            option(value="/it/") italiano
+                                            option(value="/ja/") 日本語
+                                            option(value="/ko/") 한국어
+                                            option(value="/ms/") Bahasa Melayu
+                                            option(value="/nb/") norsk (bokmål)
+                                            option(value="/nl/") Nederlands
+                                            option(value="/pl/") polski
+                                            option(value="/pt/") Português
+                                            option(value="/ru/") Русский
+                                            option(value="/sv/") svenska
+                                            option(value="/tr/" selected) Türkçe
+                                            option(value="/uk/") Українська
+                                            option(value="/vi/") Tiếng Việt
+                                            option(value="/zh-hans/") 简体中文
+    //- -------
+    section#first
+        .container
+            .row.first__col6
+                // Kategoriler
+                .col-11.col-sm-5.first__block
+                    .first__block__header
+                        p.text-center Kategoriler
+                    .first__block__content
+                        ul
+                            li
+                                a(href="/tr/smileys-emotion/") 
+                                    span.emoji 😃
+                                    | Suratlar ve Duygu
+                            
+                            li
+                                a(href="/tr/people-body/")
+                                    span.emoji 🤦‍♀️
+                                    | İnsanlar ve Vücut
+                                
+                            li
+                                a(href="/tr/animals-nature/")
+                                    span.emoji 🐶
+                                    | Hayvanlar ve Doğa
+                                
+                            li
+                                a(href="/tr/food-drink/")
+                                    span.emoji 🍩
+                                    | Yiyecek içecek
+                                
+                            li
+                                a(href="/tr/travel-places/")
+                                    span.emoji 🚗
+                                    | Seyahat ve Yerler
+                                
+                            li
+                                a(href="/tr/activities/")
+                                    span.emoji 🏀
+                                    | faaliyetler
+                                
+                            li
+                                a(href="/tr/objects/")
+                                    span.emoji 💎
+                                    | Nesneler
+                                
+                            li
+                                a(href="/tr/symbols/")
+                                    span.emoji ✅
+                                    | Semboller
+                            
+                            li
+                                a(href="/tr/flags/")
+                                    span.emoji 🏁
+                                    | Bayraklar
+
+                // Popüler Emojiler
+                .col-11.col-sm-5.first__block
+                    .first__block__header
+                        p.text-center Popüler Emojiler
+                    .first__block__content
+                        ul
+                            li
+                                a(href="/tr/face-with-tears-of-joy/")
+                                    span.emoji 😂
+                                    | Sevinç gözyaşları
+                            li
+                                a(href="/tr/smiling-face-with-hearts/")
+                                    span.emoji 🥰
+                                    | 3 kalpli gülümseyen yüz
+                            li
+                                a(href="/tr/smiling-face-with-tear/")
+                                    span.emoji 🥲
+                                    | Gözü yaşlı gülümseyen yüz
+                            li
+                                a(href="/tr/pleading-face/")
+                                    span.emoji 🥺
+                                    | Yalvaran yüz
+                            li
+                                a(href="/tr/heart-on-fire/")
+                                    span.emoji ❤️‍🔥
+                                    | Ateşli kalp
+                            li
+                                a(href="/tr/red-heart/")
+                                    span.emoji ❤️
+                                    | Kırmızı kalp
+                            li
+                                a(href="/tr/thumbs-up/")
+                                    span.emoji 👍
+                                    | Baş parmak yukarıda
+                            li
+                                a(href="/tr/fire/")
+                                    span.emoji 🔥
+                                    | Ateş
+                            li
+                                a(href="/tr/flag-ukraine/")
+                                    span.emoji 🇺🇦
+                                    | Bayrak: Ukrayna
+
+                // Emoji Klavye ve Blog
+                .col-11.col-sm-5.first__block
+                    .first__block__header
+                        p.text-center
+                            a(href="/tr/copy-keyboard/")
+                                span.emoji_widet ⌨️ 
+                                | Emoji Klavye
+                    .first__block__header
+                        p.text-center
+                            a(href="/blog/")
+                                span.emoji_widet 📝 
+                                | Blog
+                    .first__block__content
+                        ul
+                            li
+                                a(href="/blog/elon-musk-emoji/")
+                                    span.emoji 🤣
+                                    | Elon Musk's Emoji Profile
+
+                // Tema ve Oyun
+                .col-11.col-sm-5.first__block
+                    .first__block__header
+                        p.text-center
+                            a(href="/tr/theme/")
+                                span.emoji_widet 🎉 
+                                | Tema
+                    .first__block__header
+                        p.text-center
+                            a(href="/tr/concentration-game/")
+                                span.emoji_widet 🕹️ 
+                                | Konsantrasyon Oyunu
+                    .first__block__content
+                        ul
+                            li
+                                a(href="https://fontiner.com/")
+                                    span.emoji 🖋️
+                                    | Süslü Yazı Tipi Oluşturucu
+
+            .row
+                .col-12.first__col6.hometext
+                    br
+    //- -------
+    .footernav.container
+        .container.text-center
+            h2.pt-3 Platformlar:
+            .row.pt-3.pb-3
+                each platform in ['Apple', 'Google', 'Facebook', 'Twitter', 'Samsung', 'Microsoft', 'Whatsapp', 'Messenger', 'Joypixels', 'Openmoji', 'Emojidex', 'Htc', 'Lg', 'Mozilla', 'Softbank', 'Au-Kddi', 'Docomo', 'Emojigraph', 'Emojipedia']
+                    - var href = '/tr/' + platform.toLowerCase() + '/'
+                    .col-4.mb-2
+                        a(href=href)= platform
+
+
+
+block js 
+    script(src="./assets/js/min/typed.js")
