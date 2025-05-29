@@ -1,29 +1,4 @@
-:root {
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
 
-*,::after,::before {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: transparent;
-}
-
-article,footer,header,main,nav,section {
-    display: block;
-}
 
 body {
     margin: 0;
@@ -33,10 +8,6 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
-}
-
-body,div,ul,li,h1,h2,h3,form,input,textarea,p,td,button {
-    font-family: "Helvetica Neue",Arial,sans-serif, "Apple Color Emoji","twemoji mozilla", BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI Emoji","Segoe UI Symbol";
 }
 
 h1,h2,h3 {
@@ -75,7 +46,6 @@ button {
 
 button,input,select,textarea {
     margin: 0;
-    font-family: inherit;
     font-size: inherit;
     line-height: inherit;
 }
@@ -92,13 +62,7 @@ button,select {
     -webkit-appearance: button;
 }
 
-.h1,.h2,.h3,h1,h2,h3 {
-    margin-bottom: .5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
+
 
 .container {
     width: 100%;
@@ -1169,7 +1133,6 @@ img.richtext-image.centered {
 }
 
 code {
-    font-family: monospace;
     color: #262626;
     background-color: #eff0f1;
 }
