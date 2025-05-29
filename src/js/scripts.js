@@ -149,7 +149,7 @@ $(() => {
     $(".slider-top-home .swiper-paginationHome li").on('mouseenter', function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
-    
+
         var swiper = $(this).parents('.swiper')[0].swiper;
         var e = $(this).index();
         swiper.slideTo(e + 1);
@@ -174,7 +174,7 @@ $(() => {
             prevEl: ".sliderCenterHome .icon-chevron-compact-left"
         }
     });
-   
+
     $(".sliderCenterHome .swiper-pagination span").on('mouseenter', function () {
         var swiper = $(this).parents('.swiper')[0].swiper;
         var e = $(this).index();
@@ -185,7 +185,7 @@ $(() => {
     $(".sliderCenterHome .swiper-paginationHome li").on('mouseenter', function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
-    
+
         var swiper = $(this).parents('.swiper')[0].swiper;
         var e = $(this).index();
         swiper.slideTo(e + 1);
@@ -220,7 +220,7 @@ $(() => {
 
 
 
-    
+
 
     new Swiper('.slider-top-right', {
         //effect: 'fade',
@@ -280,6 +280,7 @@ $(() => {
         });
 
     }
+
 
 });
 

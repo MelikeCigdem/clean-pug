@@ -1,0 +1,330 @@
+extends ./layout/layout.pug
+include right-column.pug
+include emoji-footer.pug
+block variables
+  
+
+block content
+    .container
+        header.c__header
+            .row
+                .col-12
+                    .c__menu
+                        .c__menu__divh1.s__menu__divh1
+                            img.img__menu__pc(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png", width="52", height="52", alt="img")
+                            p.h1_menu.h1_menu__pc
+                                a(href="https://emojigraph.org/static/img/logo.fa9e46678e09.png") Emojigraph
+                        .c__menu__divform
+                            form.header__form.text-center.c__header__form(method="get", action="/tr/search/", name="search", data-simplesearch-form="")
+                                .header__div__form
+                                    .div__input.c__div__input.input-group.mb-3
+                                        input.search-input.header__input.c__header__input(type="text", name="q", required, placeholder="Arama ...", value="", data-search-input="search/")
+                                        input(type="hidden", name="searchLang", value="tr")
+                                        .input-group-append
+                                            button.search-submit.header__button.light__search__button.btn.btn-outline-secondarys(type="submit")
+                                                img(src="https://emojigraph.org/static/img/search-icon17DARK.a63ca5f1c508.svg", width="20", height="20", alt="⚲")
+                                            button.search-submit.header__button.dark__search__button.btn.btn-outline-secondarys(type="submit")
+                                                img(src="/static/img/search-icon17DARK.a63ca5f1c508.svg", width="20", height="20", alt="⚲")
+                                        .change__language
+                                            .hide__arrow
+                                                label(for="sitelang") TR
+                                                    i.down.solid
+                                                select#sitelang.select__searchLanguage(onchange="javascript:location.href = this.value;")
+                                                    option(value="/smileys-emotion/") English
+                                                    option(value="/ar/smileys-emotion/") العربيّة
+                                                    option(value="/da/smileys-emotion/") dansk
+                                                    option(value="/de/smileys-emotion/") Deutsch
+                                                    option(value="/el/smileys-emotion/") Ελληνικά
+                                                    option(value="/es/smileys-emotion/") español
+                                                    option(value="/fr/smileys-emotion/") français
+                                                    option(value="/he/smileys-emotion/") עברית
+                                                    option(value="/hi/smileys-emotion/") हिंदी
+                                                    option(value="/id/smileys-emotion/") Bahasa Indonesia
+                                                    option(value="/it/smileys-emotion/") italiano
+                                                    option(value="/ja/smileys-emotion/") 日本語
+                                                    option(value="/ko/smileys-emotion/") 한국어
+                                                    option(value="/ms/smileys-emotion/") Bahasa Melayu
+                                                    option(value="/nb/smileys-emotion/") norsk (bokmål)
+                                                    option(value="/nl/smileys-emotion/") Nederlands
+                                                    option(value="/pl/smileys-emotion/") polski
+                                                    option(value="/pt/smileys-emotion/") Português
+                                                    option(value="/ru/smileys-emotion/") Русский
+                                                    option(value="/sv/smileys-emotion/") svenska
+                                                    option(value="/tr/smileys-emotion/", selected) Türkçe
+                                                    option(value="/uk/smileys-emotion/") Українська
+                                                    option(value="/vi/smileys-emotion/") Tiếng Việt
+                                                    option(value="/zh-hans/smileys-emotion/") 简体中文
+                                        
+                            nav.menu__navigarion(role="navigation")
+                                #menuToggle
+                                    input(type="checkbox", aria-label="Mobile menu")
+                                    span
+                                    span
+                                    span
+                                    ul#menu
+            
+    style.
+        @media all and (max-width: 991px) {#mobile__menu {display: none;}}
+    #mobile__menu.c__menu__list
+        .container
+            .row
+                .col-12
+                    ul
+                        li
+                            a(href="/tr/smileys-emotion/")
+                                span.emoji_categories 😃
+                                | Suratlar ve Duygu
+                        li
+                            a(href="/tr/people-body/")
+                                span.emoji_categories 🤦‍♀️
+                                | İnsanlar ve Vücut
+                        li
+                            a(href="/tr/animals-nature/")
+                                span.emoji_categories 🐶
+                                | Hayvanlar ve Doğa
+                        li
+                            a(href="/tr/food-drink/")
+                                span.emoji_categories 🍩
+                                | Yiyecek içecek
+                        li
+                            a(href="/tr/travel-places/")
+                                span.emoji_categories 🚗
+                                | Seyahat ve Yerler
+                        li
+                            a(href="/tr/activities/")
+                                span.emoji_categories 🏀
+                                | faaliyetler
+                        li
+                            a(href="/tr/objects/")
+                                span.emoji_categories 💎
+                                | Nesneler
+                        li
+                            a(href="/tr/symbols/")
+                                span.emoji_categories ✅
+                                | Semboller
+                        li
+                            a(href="/tr/flags/")
+                                span.emoji_categories 🏁
+                                | Bayraklar
+                    
+                    #m_secondary_menu.c__menu__list(style="display: none;")
+                        ul.m_second_menu
+                            li
+                                a(href="/tr/copy-keyboard/")
+                                    span.emoji_widet ⌨️ 
+                                    | Emoji Klavye
+                            li
+                                a(href="/tr/concentration-game/")
+                                    span.emoji_widet 🕹️ 
+                                    | Konsantrasyon Oyunu
+                            li
+                                a(href="/blog/")
+                                    span.emoji_widet 📝 
+                                    | Blog
+    
+    .container
+        .row
+            .col-12.col-lg-8
+                h1.emoji__title 
+                    span.emoji 😀
+                    |  Sırıtan yüz
+                p Bazı platformlarda üst dişleri ve dili de gösteren basit, açık gözleri ve kocaman bir gülümsemesi olan sarı bir yüz. Çoğunlukla genel keyif, neşe veya mizah taşır.
+
+                .emoji__copy
+                    h2 Kopyala ve yapıştır 
+                        span.emoji 😀
+                        |  emoji:
+                    .div__center__emoji
+                        .input-group
+                            input#copyEmojiText.emoji(type="text", value="😀", aria-label="emoji to copy", readonly)
+                            button.copyEmojibtn
+                                span#myTooltip.tooltiptext Kopyala
+
+                .first_ad_m
+                    style.
+                        .first_ad_mobile {
+                            display: block;
+                            width: 320px;
+                            height: 50px;
+                            margin: 0 auto;
+                            padding-top: 8px;
+                        }
+                        @media(max-width: 329px) {
+                            .first_ad_mobile {
+                                width: 250px;
+                                height: 250px;
+                            }
+                        }
+                        @media(max-width: 349px) {
+                            .first_ad_mobile {
+                                width: 300px;
+                                height: 250px;
+                            }
+                        }
+                        @media(max-width: 279px) {
+                            .first_ad_mobile {
+                                display: none;
+                            }
+                        }
+                        @media(min-width: 768px) {
+                            .first_ad_mobile {
+                                display: none;
+                            }
+                        }
+                        .block__emoji {
+                            margin: 15px 0;
+                            border: 1px solid #eeeeee;
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                            padding: 36px;
+                            img {
+                                height: 192px;
+                            width: 192px;
+                            }
+                        }
+                    ins.adsbygoogle.first_ad_mobile(data-ad-client="ca-pub-7971670827215193", data-ad-slot="2120971199", data-adsbygoogle-status="done", style="width: 320px; height: 50px;")
+                    script.
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                h2.h2 😀 Sırıtan yüz Emoji Anlamı
+                p Sırıtan Yüz emojisi, dişleri görünen, mutlu görünümlü bir surattır — tüm zamanların en popüler ve en çok kullanılan emojilerinden biridir. O kadar neşeli ve nazik görünür ki, alaycı veya ironik anlamlarda neredeyse hiç kullanılmaz - sadece gülme, neşelenme ve yaklaşan tatil gibi bir şey için heyecanlanma bağlamında kullanılır.
+                p Ayrıca, birinin eylemlerinin veya başarılarının takdir edilmesinin, akla gelebilecek herhangi bir nedenden dolayı mutlu hissetmenin, hayatı sevmenin ve olumlu kalmanın bir işareti olarak iş görür.
+
+                h2.h2 Ayrıca Denilen
+                ul.emoji__ul
+                    li 
+                        span.emoji 😀
+                        | Mutlu Yüz
+                    li 
+                        span.emoji 😀
+                        | Gülen Yüz
+
+                h2.h2 Elma Adı
+                ul.emoji__ul
+                    li 
+                        span.emoji 😀
+                        | Grinning Face
+
+                h2.emoji__tablet__text.h2 Emoji Apple İphone, Android ve diğer platformlarda nasıl görünüyor
+
+                .row
+                    each platform in ["apple", "google", "facebook", "twitter", "samsung", "microsoft", "whatsapp", "messenger", "joypixels", "openmoji", "emojidex", "htc", "lg", "mozilla"]
+                        .col-6.text-center
+                            .block__emoji
+                                img(src=`https://emojigraph.org/media/${platform}/grinning-face_1f600.png`, alt=`Sırıtan yüz emojisi ${platform.charAt(0).toUpperCase() + platform.slice(1)} üzerinde nasıl görünüyor.`, loading="lazy", class="lazyload")
+                                h2 
+                                    a(href=`/tr/${platform}/`) #{platform.charAt(0).toUpperCase() + platform.slice(1)}
+
+                .emoji__bottom
+                    table
+                        tbody
+                            tr
+                                td.emoji__bottom__left Kategori
+                                td.emoji__bottom__right 😃 Suratlar ve Duygu
+                            tr
+                                td.emoji__bottom__left Alt grup
+                                td.emoji__bottom__right Gülen yüz
+                            tr
+                                td.emoji__bottom__left Codepoints
+                                td.emoji__bottom__right 1F600
+                            tr
+                                td.emoji__bottom__left Kısa kod
+                                td.emoji__bottom__right :grinning:
+                    h2.h2 Etiketler ve Anahtar Kelimeler:
+                    .row
+                        .col-12
+                            .emoji__tags
+                                each tag in ["gülen yüz", "gülme", "lol", "neşeli", "sırıtan yüz", "yüz", "keyifli", "mutlu", "sırıtma"]
+                                    div
+                                        a(href=`/tr/search/?q=${encodeURIComponent(tag)}&searchLang=tr`) #{tag}
+
+                    h2.h2 Sırıtan yüz 😀 devs için emoji kodları:
+                    .row
+                        .col-12
+                            .emoji__bottom
+                                table
+                                    tbody
+                                        tr
+                                            td.emoji__bottom__left HTML hex
+                                            td.emoji__bottom__right &amp;#x1F600;
+                                        tr
+                                            td.emoji__bottom__left HTML dec
+                                            td.emoji__bottom__right &amp;#128512;
+                                        tr
+                                            td.emoji__bottom__left URL escape code
+                                            td.emoji__bottom__right %F0%9F%98%80
+                                        tr
+                                            td.emoji__bottom__left Punycode
+                                            td.emoji__bottom__right xn--e28h
+                                        tr
+                                            td.emoji__bottom__left Bytes (UTF-8)
+                                            td.emoji__bottom__right F0 9F 98 80
+                                        tr
+                                            td.emoji__bottom__left JavaScript, JSON, Java
+                                            td.emoji__bottom__right \uD83D\uDE00
+                                        tr
+                                            td.emoji__bottom__left C, C++, Python
+                                            td.emoji__bottom__right \U0001f600
+                                        tr
+                                            td.emoji__bottom__left CSS
+                                            td.emoji__bottom__right \01F600
+                                        tr
+                                            td.emoji__bottom__left PHP, Ruby
+                                            td.emoji__bottom__right \u{1F600}
+                                        tr
+                                            td.emoji__bottom__left Perl
+                                            td.emoji__bottom__right \x{1F600}
+
+            .col-12.col-lg-4.category__div__right
+                +right-column 
+    +emoji-footer
+    
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+            var a = 0;
+            var men = document.getElementById("mobile__menu");
+            var smenu = document.getElementById("m_secondary_menu");
+            var menuToggleInput = document.querySelector('#menuToggle input[type="checkbox"]');
+
+            menuToggleInput.addEventListener('click', function () {
+                if (a === 0) {
+                    men.classList.add("dispmenu");
+                    smenu.classList.add("dispmenu");
+                    a = 1;
+                } else {
+                    men.classList.remove("dispmenu");
+                    smenu.classList.remove("dispmenu");
+                    a = 0;
+                }
+            });
+
+            let timeout;
+
+            $(".copyEmojibtn").on("click", function() {
+                debugger;
+                const $e = $("#copyEmojiText");
+                const $btn = $(this);
+                const $tooltip = $("#myTooltip");
+                const isHidden = $tooltip.hasClass("hidetooltip");
+                const copied = "Kopyalandı!";
+
+                $e.select();
+                $e[0].setSelectionRange(0, 99999);
+
+                document.execCommand("copy");
+
+                if (isHidden) {
+                $tooltip.removeClass("hidetooltip");
+                } else {
+                $tooltip.html(copied);
+                }
+
+                $btn.focus();
+
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                $tooltip.addClass("hidetooltip");
+                }, 1500);
+            });
+
+        });

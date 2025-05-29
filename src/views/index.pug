@@ -1,5 +1,5 @@
 extends ./layout/layout.pug
-
+include emoji-footer.pug
 
 
 block content
@@ -26,7 +26,7 @@ block content
                                     .hide__arrow
                                         label(for="sitelang") 
                                             | TR 
-                                            i.down
+                                            i.down.solid
                                         select.select__searchLanguage#sitelang(onchange="javascript:location.href = this.value;")
                                             option(value="/") English
                                             option(value="/ar/") العربيّة
@@ -52,6 +52,7 @@ block content
                                             option(value="/uk/") Українська
                                             option(value="/vi/") Tiếng Việt
                                             option(value="/zh-hans/") 简体中文
+    
     //- -------
     section#first
         .container
@@ -192,15 +193,7 @@ block content
                 .col-12.first__col6.hometext
                     br
     //- -------
-    .footernav.container
-        .container.text-center
-            h2.pt-3 Platformlar:
-            .row.pt-3.pb-3
-                each platform in ['Apple', 'Google', 'Facebook', 'Twitter', 'Samsung', 'Microsoft', 'Whatsapp', 'Messenger', 'Joypixels', 'Openmoji', 'Emojidex', 'Htc', 'Lg', 'Mozilla', 'Softbank', 'Au-Kddi', 'Docomo', 'Emojigraph', 'Emojipedia']
-                    - var href = '/tr/' + platform.toLowerCase() + '/'
-                    .col-4.mb-2
-                        a(href=href)= platform
-
+    +emoji-footer
 
 
 block js 
