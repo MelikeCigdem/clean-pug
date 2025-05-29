@@ -43,6 +43,9 @@ h1,h2,h3 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
+.ml-4{
+    margin-left: 8px;
+}
 
 p,ul {
     margin-top: 0;
@@ -750,6 +753,7 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
 
 .footernav {
     background-color: #f8f9fa;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .s__first__ul {
@@ -795,6 +799,7 @@ p {
 
 .emoji__copy {
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
     display: flex;
     align-items: center;
 }
@@ -1298,7 +1303,8 @@ code {
     }
 
     a:hover {
-        color: #89c7ff;
+        color: #282828;
+ 		
     }
 
     footer {
@@ -1337,15 +1343,15 @@ code {
     // }
 
     .header__form input::placeholder {
-        color: #b5b5b5;
+        color: #282828;
     }
 
     .header__form input {
-        color: #eee;
+        color: #282828;
     }
 
     a {
-        color: #89c7ff;
+        color: #282828;
     }
 
     .light__search__button {

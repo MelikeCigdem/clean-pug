@@ -9,13 +9,14 @@ block content
             .row
             .col-12.text-center
                 img.header__img(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png" width="55" height="55" alt="img")
-                | Emojigraph
+                span.fs-22.ml-4
+                    | Emojigraph
 
                 form.header__form.text-center(method="get" action="/tr/search/" name="search" data-simplesearch-form="")
                     .row
                         .col-11.header__div__form
                             .div__input.input-group.mb-3
-                                input.search-input.header__input.main__header__input(type="text" name="q" required=""  value="" data-search-input="search/")
+                                input.search-input.header__input.main__header__input(type="text" name="q" required="" placeholder="Arama ..."  value="" data-search-input="search/")
                                 input(type="hidden" name="searchLang" value="tr")
                                 .input-group-append
                                     button.search-submit.header__button.light__search__button.btn.btn-outline-secondarys(type="submit")
