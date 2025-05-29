@@ -240,11 +240,11 @@ span.emoji_categories {
     margin-bottom: 0.75rem;
 }
 .first__block__content ul li::before {
-    content: "⬤";
+   content: "⬤";
     position: absolute;
     left: 0;
-    top: 0rem;
-    font-size: 1rem;
+    top: 11px;
+    font-size: 0.6rem;
     color: #d0011a;
 }
 
@@ -439,12 +439,12 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
 
 .emoji__copy input {
     box-sizing: border-box;
-    box-shadow: 0px 0px 0px #3366cc;
-    border-radius: 4px 0px 0px 4px;
-    height: 50px;
+    box-shadow: 0 0 0 #36c;
+    border-radius: 4px 0 0 4px;
+    height: 84px;
     text-align: center;
-    font-size: 28px;
-    width: 94px;
+    font-size: 66px;
+    width: 97px;
     border: 1px solid #eee;
     background: #fff;
     color: #eee;
@@ -454,13 +454,13 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
     background: #eee;
     border: 1px solid #eee;
     color: #171717;
-    font-size: 16px;
+    font-size: 20px;
     box-sizing: border-box;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0 4px 4px 0;
     max-width: 144px;
     min-width: 90px;
     cursor: pointer;
-    height: 50px;
+    height: 82px;
     width: 138px;
 }
 
@@ -1037,7 +1037,7 @@ textarea {
   border: 2px solid rgb(75, 181, 67);
   background-color: rgb(75, 181, 67);
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 0.4rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
