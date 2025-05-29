@@ -219,6 +219,7 @@ span.emoji_categories {
     line-height: 16px;
     color: #fff !important;
     font-weight: 700;
+    padding: 0 10px 0 20px
 }
 
 .first__block__header:last-child {
@@ -234,7 +235,17 @@ span.emoji_categories {
 }
 
 .first__block__content ul li {
-    margin-bottom: 8px;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+.first__block__content ul li::before {
+    content: "⬤";
+    position: absolute;
+    left: 0;
+    top: 0rem;
+    font-size: 1rem;
+    color: #d0011a;
 }
 
 .hometext {
@@ -271,8 +282,8 @@ span.emoji_categories {
     font-size: 15px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #c5c5c5;
-    padding-bottom: 20px;
+    // border-bottom: 1px solid #c5c5c5;
+    // padding-bottom: 20px;
 }
 
 html:lang(en) .c__menu__list ul {
@@ -408,8 +419,10 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
 .emoji__copy {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
-    display: flex;
     align-items: center;
+    display: flex
+;
+    flex-direction: column;
 }
 
 
@@ -420,7 +433,8 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
 .emoji__copy h2 {
     float: left;
     margin-right: 8px;
-    margin-bottom: 0;
+    margin : 20px 0px;
+        color: #d0011a;
 }
 
 .emoji__copy input {
@@ -472,7 +486,7 @@ html:lang(ar) #first > div > div > div > div.first__block__content, html:lang(he
     margin-right: 8px;
     display: inline-block;
     padding: 3px 15px;
-    background: #262626;
+    background: #d0011a;
     color: #c5c5c5;
 }
 
@@ -813,6 +827,7 @@ textarea {
     .emoji__title {
         padding-top: 24px;
     }
+ 
 
     .first__block__header {
         font-size: 24px;
@@ -906,7 +921,8 @@ textarea {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 1rem 0;
+  margin-bottom: 20px;
+//   padding: 1rem 0;
 
   &__track {
     display: flex;
@@ -947,7 +963,7 @@ textarea {
 
   // Scroll çubuğunu gizlemek için (isteğe bağlı)
   &::-webkit-scrollbar {
-    display: none;
+    // display: none;
   }
 }
 .emoji-slider {
@@ -995,9 +1011,6 @@ textarea {
     }
   }
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 // 🔽 Mobil görünüm: Emoji ve yazı yan yana, küçük boyut
@@ -1017,5 +1030,46 @@ textarea {
             font-size: 1.25rem;
         }
     }
+  }
+}
+
+.flash {
+  border: 2px solid rgb(75, 181, 67);
+  background-color: rgb(75, 181, 67);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px rgb(75, 181, 67);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgb(75, 181, 67);
+  }
+  100% {
+    box-shadow: 0 0 0px rgb(75, 181, 67);
+  }
+}
+
+.load-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #ffb422;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #efb33f;
   }
 }

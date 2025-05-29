@@ -449,6 +449,10 @@
 .text-center {
     text-align: center !important;
 }
+.category-text {
+    padding: 5px 10px 5px 20px;
+    border-left: 2px solid;
+}
 
 html {
     box-sizing: border-box;
@@ -472,6 +476,7 @@ html {
 
     &.emoji {
         padding-right: 0.2em;
+        margin-bottom: 20px;
     }
 
     &.emoji_widet {
@@ -655,7 +660,7 @@ footer {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 34px;
 }
 
 h2 {
@@ -680,3 +685,7 @@ blockquote {
     display: inline-block;
     padding: 3px;
 }
+   .bold {
+        font-weight: 600;
+        font-size: 20px;
+    }

@@ -68,7 +68,7 @@ block content
                 h1.emoji__title 
                     span.emoji 😀
                     |  Sırıtan yüz
-                p Bazı platformlarda üst dişleri ve dili de gösteren basit, açık gözleri ve kocaman bir gülümsemesi olan sarı bir yüz. Çoğunlukla genel keyif, neşe veya mizah taşır.
+                p.bold Bazı platformlarda üst dişleri ve dili de gösteren basit, açık gözleri ve kocaman bir gülümsemesi olan sarı bir yüz. Çoğunlukla genel keyif, neşe veya mizah taşır.
 
                 .emoji__copy
                     h2 Kopyala ve yapıştır 
@@ -77,7 +77,7 @@ block content
                     .div__center__emoji
                         .input-group
                             input#copyEmojiText.emoji(type="text", value="😀", aria-label="emoji to copy", readonly)
-                            button.copyEmojibtn
+                            button.copyEmojibtn.flash
                                 span#myTooltip.tooltiptext Kopyala
 
                 .first_ad_m
@@ -132,24 +132,8 @@ block content
                     script.
                         (adsbygoogle = window.adsbygoogle || []).push({});
 
-                h2.h2 😀 Sırıtan yüz Emoji Anlamı
                 p Sırıtan Yüz emojisi, dişleri görünen, mutlu görünümlü bir surattır — tüm zamanların en popüler ve en çok kullanılan emojilerinden biridir. O kadar neşeli ve nazik görünür ki, alaycı veya ironik anlamlarda neredeyse hiç kullanılmaz - sadece gülme, neşelenme ve yaklaşan tatil gibi bir şey için heyecanlanma bağlamında kullanılır.
                 p Ayrıca, birinin eylemlerinin veya başarılarının takdir edilmesinin, akla gelebilecek herhangi bir nedenden dolayı mutlu hissetmenin, hayatı sevmenin ve olumlu kalmanın bir işareti olarak iş görür.
-
-                h2.h2 Ayrıca Denilen
-                ul.emoji__ul
-                    li 
-                        span.emoji 😀
-                        | Mutlu Yüz
-                    li 
-                        span.emoji 😀
-                        | Gülen Yüz
-
-                h2.h2 Elma Adı
-                ul.emoji__ul
-                    li 
-                        span.emoji 😀
-                        | Grinning Face
 
                 .emoji__bottom
                     h2.h2 Etiketler ve Anahtar Kelimeler:
@@ -184,7 +168,6 @@ block content
             let timeout;
 
             $(".copyEmojibtn").on("click", function() {
-                debugger;
                 const $e = $("#copyEmojiText");
                 const $btn = $(this);
                 const $tooltip = $("#myTooltip");
@@ -200,10 +183,12 @@ block content
                     $tooltip.removeClass("hidetooltip");
                 } else {
                     $tooltip.html(copied);
-                    $(this).css({
-                        "background-color": "#4BB543",
-                        "color": "#fff",
-                    });
+                    $(this)
+                        .css({
+                            "background-color": "#4BB543",
+                            "color": "#fff",
+                        })
+                        .removeClass("flash"); 
                 }
 
                 $btn.focus();
