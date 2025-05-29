@@ -1,6 +1,6 @@
 extends ./layout/layout.pug
 include right-column.pug
-include emoji-footer.pug
+include category.pug
 block variables
   
 
@@ -10,10 +10,6 @@ block content
             .row
                 .col-12
                     .c__menu
-                        .c__menu__divh1.s__menu__divh1
-                            img.img__menu__pc(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png", width="52", height="52", alt="img")
-                            p.h1_menu.h1_menu__pc
-                                a(href="https://emojigraph.org/static/img/logo.fa9e46678e09.png") Emojigraph
                         .c__menu__divform
                             form.header__form.text-center.c__header__form(method="get", action="/tr/search/", name="search", data-simplesearch-form="")
                                 .header__div__form
@@ -65,63 +61,7 @@ block content
             
     style.
         @media all and (max-width: 991px) {#mobile__menu {display: none;}}
-    #mobile__menu.c__menu__list
-        .container
-            .row
-                .col-12
-                    ul
-                        li
-                            a(href="/tr/smileys-emotion/")
-                                span.emoji_categories 😃
-                                | Suratlar ve Duygu
-                        li
-                            a(href="/tr/people-body/")
-                                span.emoji_categories 🤦‍♀️
-                                | İnsanlar ve Vücut
-                        li
-                            a(href="/tr/animals-nature/")
-                                span.emoji_categories 🐶
-                                | Hayvanlar ve Doğa
-                        li
-                            a(href="/tr/food-drink/")
-                                span.emoji_categories 🍩
-                                | Yiyecek içecek
-                        li
-                            a(href="/tr/travel-places/")
-                                span.emoji_categories 🚗
-                                | Seyahat ve Yerler
-                        li
-                            a(href="/tr/activities/")
-                                span.emoji_categories 🏀
-                                | faaliyetler
-                        li
-                            a(href="/tr/objects/")
-                                span.emoji_categories 💎
-                                | Nesneler
-                        li
-                            a(href="/tr/symbols/")
-                                span.emoji_categories ✅
-                                | Semboller
-                        li
-                            a(href="/tr/flags/")
-                                span.emoji_categories 🏁
-                                | Bayraklar
-                    
-                    #m_secondary_menu.c__menu__list(style="display: none;")
-                        ul.m_second_menu
-                            li
-                                a(href="/tr/copy-keyboard/")
-                                    span.emoji_widet ⌨️ 
-                                    | Emoji Klavye
-                            li
-                                a(href="/tr/concentration-game/")
-                                    span.emoji_widet 🕹️ 
-                                    | Konsantrasyon Oyunu
-                            li
-                                a(href="/blog/")
-                                    span.emoji_widet 📝 
-                                    | Blog
-    
+    +category
     .container
         .row
             .col-12.col-lg-8
@@ -211,31 +151,7 @@ block content
                         span.emoji 😀
                         | Grinning Face
 
-                h2.emoji__tablet__text.h2 Emoji Apple İphone, Android ve diğer platformlarda nasıl görünüyor
-
-                .row
-                    each platform in ["apple", "google", "facebook", "twitter", "samsung", "microsoft", "whatsapp", "messenger", "joypixels", "openmoji", "emojidex", "htc", "lg", "mozilla"]
-                        .col-6.text-center
-                            .block__emoji
-                                img(src=`https://emojigraph.org/media/${platform}/grinning-face_1f600.png`, alt=`Sırıtan yüz emojisi ${platform.charAt(0).toUpperCase() + platform.slice(1)} üzerinde nasıl görünüyor.`, loading="lazy", class="lazyload")
-                                h2 
-                                    a(href=`/tr/${platform}/`) #{platform.charAt(0).toUpperCase() + platform.slice(1)}
-
                 .emoji__bottom
-                    table
-                        tbody
-                            tr
-                                td.emoji__bottom__left Kategori
-                                td.emoji__bottom__right 😃 Suratlar ve Duygu
-                            tr
-                                td.emoji__bottom__left Alt grup
-                                td.emoji__bottom__right Gülen yüz
-                            tr
-                                td.emoji__bottom__left Codepoints
-                                td.emoji__bottom__right 1F600
-                            tr
-                                td.emoji__bottom__left Kısa kod
-                                td.emoji__bottom__right :grinning:
                     h2.h2 Etiketler ve Anahtar Kelimeler:
                     .row
                         .col-12
@@ -244,47 +160,8 @@ block content
                                     div
                                         a(href=`/tr/search/?q=${encodeURIComponent(tag)}&searchLang=tr`) #{tag}
 
-                    h2.h2 Sırıtan yüz 😀 devs için emoji kodları:
-                    .row
-                        .col-12
-                            .emoji__bottom
-                                table
-                                    tbody
-                                        tr
-                                            td.emoji__bottom__left HTML hex
-                                            td.emoji__bottom__right &amp;#x1F600;
-                                        tr
-                                            td.emoji__bottom__left HTML dec
-                                            td.emoji__bottom__right &amp;#128512;
-                                        tr
-                                            td.emoji__bottom__left URL escape code
-                                            td.emoji__bottom__right %F0%9F%98%80
-                                        tr
-                                            td.emoji__bottom__left Punycode
-                                            td.emoji__bottom__right xn--e28h
-                                        tr
-                                            td.emoji__bottom__left Bytes (UTF-8)
-                                            td.emoji__bottom__right F0 9F 98 80
-                                        tr
-                                            td.emoji__bottom__left JavaScript, JSON, Java
-                                            td.emoji__bottom__right \uD83D\uDE00
-                                        tr
-                                            td.emoji__bottom__left C, C++, Python
-                                            td.emoji__bottom__right \U0001f600
-                                        tr
-                                            td.emoji__bottom__left CSS
-                                            td.emoji__bottom__right \01F600
-                                        tr
-                                            td.emoji__bottom__left PHP, Ruby
-                                            td.emoji__bottom__right \u{1F600}
-                                        tr
-                                            td.emoji__bottom__left Perl
-                                            td.emoji__bottom__right \x{1F600}
-
             .col-12.col-lg-4.category__div__right
-                +right-column 
-    +emoji-footer
-    
+                +right-column     
     script.
         document.addEventListener("DOMContentLoaded", function () {
             var a = 0;
@@ -320,16 +197,20 @@ block content
                 document.execCommand("copy");
 
                 if (isHidden) {
-                $tooltip.removeClass("hidetooltip");
+                    $tooltip.removeClass("hidetooltip");
                 } else {
-                $tooltip.html(copied);
+                    $tooltip.html(copied);
+                    $(this).css({
+                        "background-color": "#4BB543",
+                        "color": "#fff",
+                    });
                 }
 
                 $btn.focus();
 
                 clearTimeout(timeout);
                 timeout = setTimeout(() => {
-                $tooltip.addClass("hidetooltip");
+                    $tooltip.addClass("hidetooltip");
                 }, 1500);
             });
 

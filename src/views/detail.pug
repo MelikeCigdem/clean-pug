@@ -1,6 +1,6 @@
 extends ./layout/layout.pug
 include right-column.pug
-include emoji-footer.pug
+include category.pug
 block variables
   
 
@@ -10,10 +10,6 @@ block content
             .row
                 .col-12
                     .c__menu
-                        .c__menu__divh1.s__menu__divh1
-                            img.img__menu__pc(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png", width="52", height="52", alt="img")
-                            p.h1_menu.h1_menu__pc
-                                a(href="https://emojigraph.org/static/img/logo.fa9e46678e09.png") Emojigraph
                         .c__menu__divform
                             form.header__form.text-center.c__header__form(method="get", action="/tr/search/", name="search", data-simplesearch-form="")
                                 .header__div__form
@@ -65,63 +61,8 @@ block content
             
     style.
         @media all and (max-width: 991px) {#mobile__menu {display: none;}}
-    #mobile__menu.c__menu__list
-        .container
-            .row
-                .col-12
-                    ul
-                        li
-                            a(href="/tr/smileys-emotion/")
-                                span.emoji_categories 😃
-                                | Suratlar ve Duygu
-                        li
-                            a(href="/tr/people-body/")
-                                span.emoji_categories 🤦‍♀️
-                                | İnsanlar ve Vücut
-                        li
-                            a(href="/tr/animals-nature/")
-                                span.emoji_categories 🐶
-                                | Hayvanlar ve Doğa
-                        li
-                            a(href="/tr/food-drink/")
-                                span.emoji_categories 🍩
-                                | Yiyecek içecek
-                        li
-                            a(href="/tr/travel-places/")
-                                span.emoji_categories 🚗
-                                | Seyahat ve Yerler
-                        li
-                            a(href="/tr/activities/")
-                                span.emoji_categories 🏀
-                                | faaliyetler
-                        li
-                            a(href="/tr/objects/")
-                                span.emoji_categories 💎
-                                | Nesneler
-                        li
-                            a(href="/tr/symbols/")
-                                span.emoji_categories ✅
-                                | Semboller
-                        li
-                            a(href="/tr/flags/")
-                                span.emoji_categories 🏁
-                                | Bayraklar
-                    
-                    #m_secondary_menu.c__menu__list(style="display: none;")
-                        ul.m_second_menu
-                            li
-                                a(href="/tr/copy-keyboard/")
-                                    span.emoji_widet ⌨️ 
-                                    | Emoji Klavye
-                            li
-                                a(href="/tr/concentration-game/")
-                                    span.emoji_widet 🕹️ 
-                                    | Konsantrasyon Oyunu
-                            li
-                                a(href="/blog/")
-                                    span.emoji_widet 📝 
-                                    | Blog
-    
+    +category
+    //- ------
     section#category__first
         .container
             .row
@@ -232,8 +173,6 @@ block content
                 .col-12.col-lg-4.category__div__right
                     +right-column
     
-    +emoji-footer
-
     script.
         document.addEventListener("DOMContentLoaded", function () {
             var a = 0;

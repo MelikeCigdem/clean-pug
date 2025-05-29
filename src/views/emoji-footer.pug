@@ -1,9 +1,0 @@
-mixin emoji-footer
-     .footernav
-        .container.text-center
-            h2.pt-3 Platformlar:
-            .row.pt-3.pb-3
-                each platform in ['Apple', 'Google', 'Facebook', 'Twitter', 'Samsung', 'Microsoft', 'Whatsapp', 'Messenger', 'Joypixels', 'Openmoji', 'Emojidex', 'Htc', 'Lg', 'Mozilla', 'Softbank', 'Au-Kddi', 'Docomo', 'Emojigraph', 'Emojipedia']
-                    - var href = '/tr/' + platform.toLowerCase() + '/'
-                    .col-4.mb-2
-                        a(href=href)= platform

@@ -1,5 +1,4 @@
 extends ./layout/layout.pug
-include emoji-footer.pug
 
 
 block content
@@ -7,11 +6,7 @@ block content
     header.header
         .container
             .row
-            .col-12.text-center
-                img.header__img.mb-4(src="https://emojigraph.org/static/img/logo.fa9e46678e09.png" width="55" height="55" alt="img")
-                span.fs-22.ml-4.mb-4
-                    | Emojigraph
-
+            .col-12.text-center.mt-4
                 form.header__form.text-center(method="get" action="/tr/search/" name="search" data-simplesearch-form="")
                     .row
                         .col-11.header__div__form
@@ -21,8 +16,6 @@ block content
                                 .input-group-append
                                     button.search-submit.header__button.light__search__button.btn.btn-outline-secondarys(type="submit")
                                         img(src="https://emojigraph.org/static/img/search-icon17DARK.a63ca5f1c508.svg" width="20" height="20" alt="⚲")
-                                    //- button.search-submit.header__button.dark__search__button.btn.btn-outline-secondarys(type="submit")
-                                    //-     img(src="https://emojigraph.org/static/img/search-icon17DARK.a63ca5f1c508.svg" width="20" height="20" alt="⚲")
                                 .change__language.language__main
                                     .hide__arrow
                                         label(for="sitelang") 
@@ -67,12 +60,12 @@ block content
                             li
                                 a(href="/tr/smileys-emotion/") 
                                     span.emoji 😃
-                                    | Suratlar ve Duygu
+                                    | Suratlar ve Hisler
                             
                             li
                                 a(href="/tr/people-body/")
                                     span.emoji 🤦‍♀️
-                                    | İnsanlar ve Vücut
+                                    | İnsanlar ve El  İşaretleri
                                 
                             li
                                 a(href="/tr/animals-nature/")
@@ -82,32 +75,32 @@ block content
                             li
                                 a(href="/tr/food-drink/")
                                     span.emoji 🍩
-                                    | Yiyecek içecek
+                                    | Yiyecek, içecekler
                                 
                             li
                                 a(href="/tr/travel-places/")
                                     span.emoji 🚗
-                                    | Seyahat ve Yerler
+                                    | Seyahat, Mekanlar
                                 
                             li
                                 a(href="/tr/activities/")
                                     span.emoji 🏀
-                                    | faaliyetler
+                                    | Faaliyetler, Oyunlar
                                 
                             li
                                 a(href="/tr/objects/")
                                     span.emoji 💎
-                                    | Nesneler
+                                    | Nesneler, Eşyalar
                                 
                             li
                                 a(href="/tr/symbols/")
                                     span.emoji ✅
-                                    | Semboller
+                                    | Semboller, İşaretler
                             
                             li
                                 a(href="/tr/flags/")
                                     span.emoji 🏁
-                                    | Bayraklar
+                                    | Bayraklar, Ülkeler
 
                 // Popüler Emojiler
                 .col-11.col-sm-5.first__block
@@ -152,49 +145,11 @@ block content
                                     span.emoji 🇺🇦
                                     | Bayrak: Ukrayna
 
-                // Emoji Klavye ve Blog
-                .col-11.col-sm-5.first__block
-                    .first__block__header
-                        p.text-center
-                            a(href="/tr/copy-keyboard/")
-                                span.emoji_widet ⌨️ 
-                                | Emoji Klavye
-                    .first__block__header
-                        p.text-center
-                            a(href="/blog/")
-                                span.emoji_widet 📝 
-                                | Blog
-                    .first__block__content
-                        ul
-                            li
-                                a(href="/blog/elon-musk-emoji/")
-                                    span.emoji 🤣
-                                    | Elon Musk's Emoji Profile
-
-                // Tema ve Oyun
-                .col-11.col-sm-5.first__block
-                    .first__block__header
-                        p.text-center
-                            a(href="/tr/theme/")
-                                span.emoji_widet 🎉 
-                                | Tema
-                    .first__block__header
-                        p.text-center
-                            a(href="/tr/concentration-game/")
-                                span.emoji_widet 🕹️ 
-                                | Konsantrasyon Oyunu
-                    .first__block__content
-                        ul
-                            li
-                                a(href="https://fontiner.com/")
-                                    span.emoji 🖋️
-                                    | Süslü Yazı Tipi Oluşturucu
-
+            
             .row
                 .col-12.first__col6.hometext
                     br
-    //- -------
-    +emoji-footer
+
 
 
 block js 
